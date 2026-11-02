@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Conversor de Arquivos",
+  "version": "1.7.1",
+  "description": "Conversor local de áudio, vídeo, documentos, PDF, texto e imagens.",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Conversor de Arquivos",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "permissions": [
+    "nativeMessaging",
+    "storage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'"
+  }
+}

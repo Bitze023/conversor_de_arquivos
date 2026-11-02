@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Arquivos</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo" aria-hidden="true">⇄</div>
+      <div>
+        <h1>Conversor de Arquivos</h1>
+        <p>Conversão local e segura</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="converter-title">
+      <h2 id="converter-title">Converter arquivo</h2>
+
+      <button id="pick-button" class="button primary" type="button">1. Escolher arquivo do computador</button>
+
+      <div id="selected-box" class="selected" hidden>
+        <span>Arquivo selecionado</span>
+        <strong id="selected-name"></strong>
+        <small id="selected-type"></small>
+        <button id="change-button" class="button secondary" type="button">Trocar arquivo</button>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="format">2. Converter para</label>
+          <select id="format" disabled>
+            <option value="">Escolha o arquivo primeiro</option>
+          </select>
+        </div>
+        <div id="quality-field" class="field" hidden>
+          <label for="quality">Qualidade</label>
+          <select id="quality">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="convert-button" class="button success" type="button" disabled>3. Converter e salvar</button>
+
+      <output id="status" class="status" aria-live="polite">Escolha um arquivo para começar.</output>
+
+      <p class="hint">O arquivo é processado localmente no computador. Ao converter, escolha a pasta onde deseja salvar o resultado.</p>
+    </section>
+
+    <footer>Versão 1.7.0</footer>
+  </main>
+</body>
+</html>

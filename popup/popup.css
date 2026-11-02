@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    width: 360px;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    display: grid;
+    gap: 14px;
+
+    padding: 16px;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header h1,
+.header p {
+    margin: 0;
+}
+
+.header h1 {
+    font-size: 18px;
+}
+
+.header p {
+    margin-top: 2px;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/* ================================
+   CARTÃO
+================================ */
+
+.card {
+    display: grid;
+    gap: 13px;
+
+    padding: 14px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.card h2 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+
+.button {
+    width: 100%;
+
+    padding: 10px;
+
+    border:*0;
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.button:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+.button:disabled {
+    background: #475569 !important;
+
+    color: #94a3b8;
+
+    cursor: not-allowed;
+}
+
+.primary {
+    background: #2563eb;
+}
+
+.success {
+    background: #059669;
+}
+
+.secondary {
+    background: #334155;
+
+    border: 1px solid #475569;
+}
+
+/* ================================
+   ARQUIVO SELECIONADO
+================================ */
+
+.selected {
+    display: grid;
+    gap: 6px;
+
+    padding: 10px;
+
+    background: #052e16;
+
+    border: 1px solid #22c55e;
+    border-radius: 9px;
+}
+
+.selected span {
+    font-size: 11px;
+
+    color: #86efac;
+}
+
+.selected strong {
+    color: #ffffff;
+
+    word-break: break-word;
+}
+
+.selected small {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+/* ================================
+   CAMPOS
+================================ */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 12px;
+
+    color: #cbd5e1;
+}
+
+select {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    font-size: 13px;
+}
+
+select:focus {
+    outline: 2px solid #60a5fa;
+    outline-offset: 1px;
+}
+
+select:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+/* ================================
+   STATUS
+================================ */
+
+.status {
+    display: block;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+.status.error {
+    color: #f87171;
+}
+
+.status.success {
+    color: #4ade80;
+}
+
+/* ================================
+   TEXTO DE AJUDA
+================================ */
+
+.hint {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+
+footer {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 330px) {
+
+    body {
+        width: 320px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

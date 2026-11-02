@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambiente virtual
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.log
+*.bak
+*~
+
+# Dados temporários do conversor
+MediaConverter/
+selections/
+
+# Arquivos usados em testes
+teste-*
+horse.mp3
+
+# Segredos e configurações locais
+.env
+.env.*
+*.key
+*.pem
+
+# Arquivos temporários do LibreOffice
+.~lock.*
